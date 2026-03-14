@@ -1,7 +1,7 @@
-import WeaponRepo from './weaponRepo';
+import WeaponRepo from './WeaponRepo'
 import { Response, Request} from 'express'
 
-export default class weaponController {
+export default class WeaponController {
 
     static async browse(req: Request, res: Response) {
         try {

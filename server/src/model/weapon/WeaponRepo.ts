@@ -1,7 +1,7 @@
 import { ResultSetHeader, RowDataPacket } from "mysql2";
 import {db} from "../../database/db.config";
 import {Weapon}  from "./WeaponEntity";
-
+//
 export default class WeaponRepo {
 
    static async create(weapon: Omit<Weapon, "id">): Promise<number> {
