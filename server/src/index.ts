@@ -1,6 +1,6 @@
 import express from "express";
 import cookieparser from "cookie-parser";
-import router from "./routes";
+import router from "./routes.js";
 import type { ErrorRequestHandler } from "express";
 
 const app = express();
@@ -38,11 +38,11 @@ const logErrors: ErrorRequestHandler = (err, req, res, next) => {
    next(err);
 };
 
-app.use(logErrors);
-
 app.get("/", (req, res) => {
    res.send("Hello World!");
 });
+
+app.use(logErrors);
 
 app.listen(port, () => {
    console.log(`Example app listening on port ${port}`);

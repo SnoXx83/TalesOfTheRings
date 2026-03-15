@@ -28,10 +28,10 @@ const logErrors = (err, req, res, next) => {
     console.log("on req:", req.method, req.path);
     next(err);
 };
-app.use(logErrors);
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
+app.use(logErrors);
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });

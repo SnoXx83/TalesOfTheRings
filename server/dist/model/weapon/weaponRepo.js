@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { db } from "../../database/db.config";
+//
 export default class WeaponRepo {
     static create(weapon) {
         return __awaiter(this, void 0, void 0, function* () {
