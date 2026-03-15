@@ -43,6 +43,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(logErrors);
+console.log(process.env.DB_HOST);
 
 app.listen(port, () => {
    console.log(`Example app listening on port ${port}`);
